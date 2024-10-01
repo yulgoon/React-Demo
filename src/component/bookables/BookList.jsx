@@ -4,16 +4,18 @@ import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
 
 function BookList() {
     // console.log('bookables: ', bookables)
-    const group = 'Rooms'
+    // const group = 'Rooms'
     // const group = 'Kit'
 
     // let bookableIndex = 1    // 상태 값이 1로 설정되고 일반적인 방법으로 changeBookable()를 호출하여 상태를 변화시켜도 렌더링 되지 않습니다. 즉, 제대로 동작 안 합니다.
+    let [group, setGroup] = useState('Rooms')
     const bookableGroup = bookables.filter(b => (b.group === group))
     
     // 상태값 관리를 해야할 변수 bookableIndex
     // setBookableIndex: useState가 리턴해 주는 메서드 => 값 변경 메서드 => 값 변경을 react에서 인식해야 새로 렌더링을 합니다.
     // const [bookableIndex, setBookableIndex] = useState() // useState()에 초깃값을 주지 않으면 bookableIndex가 undefined이며, 첫 렌더링에 선택된 곳이 없게 됩니다.
     const [bookableIndex, setBookableIndex] = useState(0) // bookableIndex의 초깃값으로 0을 지정합니다.
+    const groups = ['Rooms', 'Kit']
 
     // function changeBookable(selectedIndex) {
     //     bookableIndex = selectedIndex // bookableIndex에 onClick 상태 변화를 대입하더라도 react에서는 상태 변화를 인식하지 않습니다. 따라서, 렌더링 되지 않으므로 useState hook을 사용하여야 합니다.
@@ -31,8 +33,11 @@ function BookList() {
 
     return (
         <div>
+            <select value={ group} onChange={ (e) => setGroup(e.target.value)}>
+                { groups.map(g => <option key={ g} value={ g}>{ g}</option>)}
+            </select>
             <ul className='items-list-nav'>
-                {bookableGroup.map((b, i) => (
+                { bookableGroup.map((b, i) => (
                     <li key={b.id}
                         className={i === bookableIndex ? 'selected' : null}>
                         <button className='btn' onClick={() => setBookableIndex(i)}>
