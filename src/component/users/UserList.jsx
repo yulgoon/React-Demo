@@ -21,7 +21,7 @@ function UserList() {
                     <li key={u.id}
                         className={i === userIndex ? 'selected' : null}>
                         <button className='btn' onClick={() => setUserIndex(i)}>
-                            {u.title}
+                            {u.name}
                         </button>
                     </li>
                 ))}
