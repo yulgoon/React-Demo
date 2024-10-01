@@ -11,7 +11,7 @@ export function Carport() {
         <>
             <h1>우리집 차고에 있는 차종은?</h1>
             <ul>
-                {cars.map((car) =>
+                {cars.map(car =>
                     <Car key={ car.id} brand={ car.brand}/>
                 )}
             </ul>
