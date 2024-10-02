@@ -18,6 +18,7 @@ function addDays(forDate, offset) {
     const date = new Date(forDate.getTime())
     // 원하는 날짜만큼 +(합산) 또는 -(감산) 계산하여 새로운 날짜값 저장
     date.setDate(date.getDate() + offset)
+    return date
 }
 
 /* 위 함수 테스트입니다. */

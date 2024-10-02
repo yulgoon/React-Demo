@@ -1,21 +1,21 @@
 import getWeek from "./date-util.js";
 
-export default function reducer(state, action) {
-    switch (action.type) {
-        case 'NEXT_WEEK':
-            /*지정된 날짜 + 7*/
-            return getWeek(state.date, 7);
-        case 'PREV_WEEK':
-            /*지정된 날짜 - 7*/
+export default function reducer(state, action){
+    switch (action.type){
+        case "NEXT_WEEK":
+            /*지정된 날짜 +7 */
+            return getWeek(state.date,7);
+        case "PREV_WEEK":
+            /*지정된 날짜 -7*/
             return getWeek(state.date, -7);
-        case 'TODAY':
+        case "TODAY":
             /*오늘 날짜*/
             return getWeek(new Date());
-        case 'SET_DATE':
-            /*임의의 날짜: action.payload*/
+        case "SET_DATE":
+            /*임의의 날짜 : action.payload*/
             return getWeek(new Date(action.payload));
         default:
-    //         return state;
+            // return state;
             throw new Error(`알 수 없는 action type: ${action.type}`)
     }
 }
