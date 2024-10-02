@@ -1,40 +1,35 @@
-import {users} from '../../static.json'
 import {useState} from "react";
-import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
+import {users} from "../../static.json"
+//     -> 서버에서 가져온 것이 아닌 자바스크립트 json 데이터입니다.
 
-function UserList() {
-    const userGroup = users
+function UserList (){
+    // const [users, setUsers] = useState(null)
     const [userIndex, setUserIndex] = useState(0)
+    const user = users[userIndex]
 
-    function prevUserIndex() {
-        userIndex !== 0 ? setUserIndex(i => (i-1) % userGroup.length) : setUserIndex(userGroup.length-1)
-    }
-
-    function nextUserIndex() {
-        setUserIndex(i => (i+1) % userGroup.length)
-    }
-
-    return (
-        <div>
-            <ul className='items-list-nav'>
-                {userGroup.map((u, i) => (
+    return(
+        <>
+            <ul className="users items-list-nav">
+                {users.map((u,i)=>(
                     <li key={u.id}
-                        className={i === userIndex ? 'selected' : null}>
-                        <button className='btn' onClick={() => setUserIndex(i)}>
+                        className={i=== userIndex? "selected":null}>
+                        <button className="btn btn-header"
+                                onClick={()=>setUserIndex(i)}>
                             {u.name}
                         </button>
                     </li>
                 ))}
             </ul>
-            <p>
-                <button className="btn" onClick={ prevUserIndex}>
-                    <FaArrowLeft/><span>Prev</span>
-                </button>
-                <button className="btn" onClick={ nextUserIndex}>
-                    <span>Next</span><FaArrowRight/>
-                </button>
-            </p>
-        </div>
+            <div className="item user">
+                <div className="item-header">
+                    <h2>{user.name}</h2>
+                </div>
+                <div className="user-details">
+                    <h3>{user.title}</h3>
+                    <p>{user.notes}</p>
+                </div>
+            </div>
+        </>
     )
 }
 
