@@ -11,6 +11,7 @@ function UserList (){
     const user = users?.[userIndex] // java의 optional 역할을 하는 연산자 => users가 null이 아닐 때만 실행합니다.
 
     // api 서비스 제공하는 데이터를 서버로부터 가져오기
+    // useEffect
     useEffect(() => {
         setLoading(true)
         fetch('http://localhost:3002/users')
