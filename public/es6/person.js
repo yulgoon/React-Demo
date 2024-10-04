@@ -3,21 +3,11 @@
 // This makes it easier to maintain the code-base.
 // ES Modules rely on the import and export statements.
 
-// Export
-// You can export a function or variable from any file.
-// There are two types of exports: Named and Default.
+// Export(내보내기)
+export const name = "Jesse"
+export const age = 40
 
-//In-line individually Named export
-// export const name = "Jesse"
-// export const age = 40
-
-//All at once at the bottom Named export
-// export const name = "Jesse"
-// export const age = 40
-const name = "Jesse"
-const age = 40
-
-export { name, age }
+// export { name, age }
 
 // default export : You can only have one default export in a file.
 const message = () => {

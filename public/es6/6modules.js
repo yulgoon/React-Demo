@@ -8,9 +8,9 @@
 import { name, age } from "./person.js";
 
 // Import a default export from the file message.js:
-console.log('name: ', name)
-console.log('age: ', age)
+console.log(name)
+console.log(age)
 
-// Default keyword로 내보내기(Export)
+//default 키워드 내보내기
 import message from "./person.js";
-console.log('message(): ', message())
+console.log(message())

@@ -19,6 +19,7 @@ export default function reducer(state, action){
             throw new Error(`알 수 없는 action type: ${action.type}`)
     }
 }
-// return은 getWeek 메서드로 변경된 state.date를 구합니다.
-// state는 object: date(선택날짜), start(date 날짜의 해당 주 시작 날짜), end(date 날짜의 해당 주 마지막 날짜)
-// getWeek 메서드는 다른 component에서도 실행합니다.
+// return 은 getWeek 메소드로 변경된 state.date 를 구합니다.
+// state 는 오브젝트 : date(선택날짜)
+//       ,start(date 날짜 해당 주 시작날짜) ,end(마지막날짜)
+// getWeek 메소드는 다른 컴포넌트에서도 실행합니다.

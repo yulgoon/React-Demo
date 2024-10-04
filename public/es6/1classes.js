@@ -1,5 +1,4 @@
-// == ES6 Classes ==
-// javascript에서도 다음과 같이 클래스를 정의할 수 있습니다.
+// == 자바스크립트에서도 다음과 같이 클래스를 정의합니다. ==
 class Car {
     constructor(name) {
       this.brand = name;
@@ -11,7 +10,7 @@ class Car {
   }
   
 const mycar = new Car("Ford");
-// javascript runtime 환경 node.js에서는 terminal에서 출력 확인 가능
+// 자바스크립트 런타임 환경 node.js 에서는 터미널에서 출력확인 가능
 console.log(mycar)  //Car { brand: 'Ford' }
 console.log(mycar.present())
 
