@@ -15,38 +15,25 @@ const param_hello = (val) => "Hello " + val;
 
 // hello = val => "Hello " + val;     // 파라미터 1개 일때.
 
-/*function Person() {
+function Person() {
     this.age = 0;
 
     setInterval(function() {
-        this.age++; // 여기서 this는 setInterval의 컨텍스트를 가리킴
+        this.age++;
+        // 여기서 this는 setInterval의 컨텍스트를 가리킴
         console.log(this.age); // NaN 또는 예상치 못한 값
     }, 1000);
 }
 
-const p = new Person();*/
+const p = new Person();
 
-function People() {
+/*function People() {
     this.age = 0;
 
     setInterval(() => {
         this.age++; // 화살표 함수는 상위 스코프의 this를 참조함
         console.log(this.age);
-    }, 1000);
+    }, 1000);   //1초마다 화살표함수  실행
 }
 
-const p = new People();
-
-
-/*
-function Person() {
-    let age = 0;
-
-    setInterval(function() {
-        age++;
-        console.log(age);
-    }, 1000);
-}
-
-const p = new Person();
-*/
+const p = new People();*/
