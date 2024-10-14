@@ -115,38 +115,6 @@
         5,
         6
       ]
-    },
-    {
-      "notes": "All liquors are available at a discounted price.",
-      "group": "Rooms",
-      "title": "Party Room",
-      "days": [
-        6,
-        5,
-        0
-      ],
-      "sessions": [
-        3,
-        4
-      ],
-      "id": 10
-    },
-    {
-      "group": "Kit",
-      "title": "Kitchenware",
-      "notes": "Kitchenware and tools are offered in the Party Room",
-      "days": [
-        5,
-        6,
-        0,
-        3,
-        4
-      ],
-      "sessions": [
-        4,
-        3
-      ],
-      "id": 11
     }
   ],
   "users": [
@@ -242,7 +210,8 @@
       "bookableId": 2,
       "title": "Quiz",
       "bookerId": 1,
-      "id": 9
+      "id": 9,
+      "notes": "hi"
     }
   ]
 }

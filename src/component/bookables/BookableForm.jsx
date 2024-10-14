@@ -46,7 +46,7 @@ export default function BookableForm({formState={},handleSubmit,handleDelete}){
 
     }
     //입력할 때 바뀌는 것을 관찰.
-    console.log("BookableForm state---", state)
+    console.log("BookableForm state---",state)
 
     return (
         <main className="bookables-form">
@@ -117,15 +117,15 @@ export default function BookableForm({formState={},handleSubmit,handleDelete}){
                 {handleDelete && (
                     <button className="btn btn-delete controls-alt"
                             onClick={handleDelete}>
-                        <FaTrash/><span>delete</span>
+                        <FaTrash/><span>삭제</span>
                     </button>
                 )}
                 <Link className="btn"
                       to={state.id ? `/bookables/${state.id}`:`/bookables`}>
-                    <FaWindowClose/><span>close</span>
+                    <FaWindowClose/><span>닫기</span>
                 </Link>
                 <button className="btn" onClick={handleSubmit}>
-                    <FaCloudUploadAlt/><span>save</span>
+                    <FaCloudUploadAlt/><span>저장</span>
                 </button>
             </p>
         </main>
